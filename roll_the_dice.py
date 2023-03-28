@@ -16,19 +16,19 @@ def roll_the_dice():
     else:
         return 'Wrong value'
 
-    if multiply:
-        try:
-            multiply = int(multiply)
-        except ValueError:
-            return 'Wrong input'
-    else:
-        multiply = 1
+    try:
+        multiply = int(multiply) if multiply else 1
+    except ValueError:
+        return 'Wrong input'
 
     # --------------------------------------------------
-    # try:
-    #     multiply = int(multiply) if multiply else 1
-    # except ValueError:
-    #     return 'Wrong input'
+    # if multiply:
+    #     try:
+    #         multiply = int(multiply)
+    #     except ValueError:
+    #         return 'Wrong input'
+    # else:
+    #     multiply = 1
     # --------------------------------------------------
 
     if modifier:
